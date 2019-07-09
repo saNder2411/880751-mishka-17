@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Ольшанский](https://up.htmlacademy.ru/adaptive/17/user/880751).
-* Наставник: [Евгений Алипкин] (https://htmlacademy.ru/profile/ealipkin).
+* Наставник: [Евгений Алипкин](https://htmlacademy.ru/profile/ealipkin).
 
 ---
 
