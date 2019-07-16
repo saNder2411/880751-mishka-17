@@ -126,35 +126,39 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
-                как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
-              <cite class="reviews__author">
-                <b>Анастасия Красильникова</b><br>
-                @misssssiskras
-              </cite>
-            </blockquote>
+          <div class="slider__list">
+            <div class="slider__item">
+              <blockquote class="reviews__item">
+                <p class="reviews__text">
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+                  как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
+                <cite class="reviews__author">
+                  <b>Анастасия Красильникова</b><br>
+                  @misssssiskras
+                </cite>
+              </blockquote>
+            </div>
           </div>
-          <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв"></button>
-          <button class="reviews__next" type="button" aria-label="Следующий отзыв"></button>
-          <a class="reviews__write button" href="#">Написать</a>
+          <nav class="slider__nav">
+            <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="slider__button slider__buttons--next" type="button" aria-label="Следующий отзыв"></button>
+          </nav>
+          <a class="reviews__button button" href="#">Написать</a>
         </div>
       </section>
 
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__list">
+          <table class="contacts__table">
             <tr>
               <td class="contacts__properties">
                 e-mail:
               </td>
               <td class="contacts__value">
-                info@mimimishkashop.ru
+                <a class="contacts__link">info@mimimishkashop.ru</a>
               </td>
             </tr>
             <tr>
@@ -169,7 +173,7 @@
             </tr>
           </table>
           <img class="contacts__map" src="img/.." width="322" height="457" alt="Карта с адресом магазина">
-          <a class="contacts__write button" href="#">Напишите нам</a>
+          <a class="contacts__button button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -193,5 +197,29 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">
+        Выберите размер:
+      </p>
+      <form class="form" action="#" method="get">
+        <ul class="form__list">
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="small" id="small-radio">
+            <label for="small-radio">S</label>
+          </li>
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="middle" id="middle-radio">
+            <label for="middle-radio">M</label>
+          </li>
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="large" id="large-radio">
+            <label for="large-radio">L</label>
+          </li>
+        </ul>
+        <button class="form__submit button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>

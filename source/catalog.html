@@ -91,23 +91,17 @@
             </p>
           </li>
         </ul>
-        <!-- Большие сомнения по правельности разметки блока с видео еще и тегом <figure>,
-        никогда с видео не сталкивался, но мне кажеться кривое решение-->
         <article class="production">
-        </figure>
           <h3 class="production__title">Процесс производства</h3>
-          <figure class="production__block">
-            <video class="pordactio__video" controls preload="metadata" width="260" height="150">
-              <source src="video.mp4" type="video/mp4">
-              <source src="video.ogv" type="video/ogg">
-              <source src="video.webm" type="video/webm">
-            </video>
-            <figcaption class="production__description-video">
-              По просьбам наших любимых фолловеров мы сняли для вас подробное
-              видео о том, как появляются наши товары.
-            </figcaption>
-          </figure>
-          <a class="production__order button" href="#">Сделать заказ</a>
+          <div class="pordaction__video">
+            <img class="pordaction__image" src="img/.."  width="260" height="150" alt="Превью видео">
+            <button class="production__play" type="button"></button>
+          </div>
+          <p class="production__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное
+            видео о том, как появляются наши товары.
+          </p>
+          <a class="production__button" href="#">Сделать заказ</a>
         </article>
       </section>
     </main>
@@ -133,5 +127,29 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">
+        Выберите размер:
+      </p>
+      <form class="form" action="#" method="get">
+        <ul class="form__list">
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="small" id="small-radio">
+            <label for="small-radio">S</label>
+          </li>
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="middle" id="middle-radio">
+            <label for="middle-radio">M</label>
+          </li>
+          <li class="form__item">
+            <input class="form__radio" type="radio" name="large" id="large-radio">
+            <label for="large-radio">L</label>
+          </li>
+        </ul>
+        <button class="form__submit button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
