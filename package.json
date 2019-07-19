@@ -12,7 +12,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-postcss": "8.0.x",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "10.1.x",
+    "stylelint": "9.10.1",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {

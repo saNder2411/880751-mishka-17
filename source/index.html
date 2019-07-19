@@ -5,11 +5,14 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header-page">
       <a class="header-page__logo">
-        <img class="header-page__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
+        <img class="header-page__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -86,7 +89,7 @@
             </td>
           </tr>
         </table>
-        <img class="top-product__image" src="img/triple-set-mobile.png" width="260" height="315" alt="Товар недеи">
+        <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недеи">
         <p class="top-product__price">Цена: 990 руб.</p>
         <button class="top-productd__button button" type="button">ЗАКАЗАТЬ</button>
       </section>
@@ -96,27 +99,27 @@
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__list">
             <li class="about-us__item">
-              <img class="about-us__image about-us__image--eko" src="img/." alt="иконка цветок" width="32" height="37">
+              <img class="about-us__image about-us__image--eko" src="img/icon-feature-flower.svg" alt="иконка цветок" width="32" height="37">
               Экологически чистые материалы
             </li>
             <li class="about-us__item">
-              <img class="about-us__image about-us__image--north-style" src="img/." alt="иконка купюра" width="47" height="27">
+              <img class="about-us__image about-us__image--north-style" src="img/icon-feature-money.svg" alt="иконка купюра" width="47" height="27">
               Скандинавский стиль по российской цене
             </li>
             <li class="about-us__item">
-              <img class="about-us__image about-us__image--like-pluse" src="img/." alt="иконка сердечко" width="34" height="27">
+              <img class="about-us__image about-us__image--like-pluse" src="img/icon-feature-heart.svg" alt="иконка сердечко" width="34" height="27">
               Увеличивает лайки на фотографиях
             </li>
             <li class="about-us__item">
-              <img class="about-us__image about-us__image--with-love" src="img/." alt="иконка клубок ниток" width="35" height="34">
+              <img class="about-us__image about-us__image--with-love" src="img/icon-feature-ball.svg" alt="иконка клубок ниток" width="35" height="34">
               Связано вручную с любовью и умилением
             </li>
             <li class="about-us__item">
-              <img class="about-us__image about-us__imagem--national-produce" src="img/." alt="иконка ракета" width="55" height="23">
+              <img class="about-us__image about-us__imagem--national-produce" src="img/icon-feature-rocket.svg" alt="иконка ракета" width="55" height="23">
               Поддержка отечественного производителя
             </li>
             <li class="about-us__item">
-              <img class="about-us__image about-us__image--gift-wrapping" src="img/." alt="иконка подарок" width="33" height="32">
+              <img class="about-us__image about-us__image--gift-wrapping" src="img/icon-feature-gift.svg" alt="иконка подарок" width="33" height="32">
               Поставляется в подарочной упаковке
             </li>
           </ul>
@@ -126,35 +129,39 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
-                как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
-              <cite class="reviews__author">
-                <b>Анастасия Красильникова</b><br>
-                @misssssiskras
-              </cite>
-            </blockquote>
+          <div class="slider__list">
+            <div class="slider__item">
+              <blockquote class="reviews__item">
+                <p class="reviews__text">
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+                  как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
+                <cite class="reviews__author">
+                  <b>Анастасия Красильникова</b><br>
+                  @misssssiskras
+                </cite>
+              </blockquote>
+            </div>
           </div>
-          <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв"></button>
-          <button class="reviews__next" type="button" aria-label="Следующий отзыв"></button>
-          <a class="reviews__write button" href="#">Написать</a>
+          <nav class="slider__nav">
+            <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="slider__button slider__buttons--next" type="button" aria-label="Следующий отзыв"></button>
+          </nav>
+          <a class="reviews__button button" href="#">Написать</a>
         </div>
       </section>
 
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__list">
+          <table class="contacts__table">
             <tr>
               <td class="contacts__properties">
                 e-mail:
               </td>
               <td class="contacts__value">
-                info@mimimishkashop.ru
+                <a class="contacts__link">info@mimimishkashop.ru</a>
               </td>
             </tr>
             <tr>
@@ -168,8 +175,8 @@
               </td>
             </tr>
           </table>
-          <img class="contacts__map" src="img/.." width="322" height="457" alt="Карта с адресом магазина">
-          <a class="contacts__write button" href="#">Напишите нам</a>
+          <img class="contacts__map" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта с адресом магазина">
+          <a class="contacts__button button" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -193,5 +200,29 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">
+        Выберите размер:
+      </p>
+      <form class="modal__form" action="#" method="get">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="modal__radio toggle" type="radio" name="small" id="small-radio">
+            <label for="small-radio">S</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__radio toggle" type="radio" name="middle" id="middle-radio">
+            <label for="middle-radio">M</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__radio toggle" type="radio" name="large" id="large-radio">
+            <label for="large-radio">L</label>
+          </li>
+        </ul>
+        <button class="modal__submit button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
