@@ -16,12 +16,29 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
-  color: #000000;
+  color: @black;
 }
 
 .get-font-button() {
+  font-family: inherit;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 20px;
-  color: #444444;
+  color: @grayish-text;
+  text-transform: uppercase;
+}
+
+.get-font-input() {
+  font-family: inherit;
+  font-size: 19px;
+  line-height: 1em;
+  text-align: left;
+  color: @grayish-text;
+  &::placeholder {
+    font-family: inherit;
+    font-size: 19px;
+    line-height: 1em;
+    text-align: left;
+    color: @gray-placeholder;
+  }
 }

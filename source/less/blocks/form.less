@@ -1,18 +1,19 @@
 .form {
   .get-outline();
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 .form__fieldset {
   border: none;
-  border-top: 1px solid @base-color;
+  border-top: 1px solid @green1;
 }
 
 .form__title {
   font-weight: bold;
   font-size: 17px;
-  line-height: 16px;
-  color: @base-color;
+  line-height: 1em;
+  color: @green1;
+  text-transform: uppercase;
 }
 
 .form__list {
@@ -23,7 +24,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
+  color: @black;
 }
 
 .form__note {
@@ -31,8 +32,10 @@
   line-height: 16px;
 }
 
-.form__submit {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
+.form__input {
+  .get-font-input();
+}
+
+.form__textarea {
+  .get-font-input();
 }

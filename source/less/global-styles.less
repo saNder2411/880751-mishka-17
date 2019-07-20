@@ -1,15 +1,15 @@
 body {
-  min-width: 320px;
   .margin-padding-reset();
+  min-width: 320px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: normal;
   text-align: left;
-  color: #444444;
+  color: @grayish-text;
 
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 img {
@@ -19,4 +19,15 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
