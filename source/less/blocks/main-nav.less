@@ -1,4 +1,36 @@
 .main-nav {
-  .get-outline(5px, 250);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   background-color: @white;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -45px;
+  right: 30px;
+}
+
+// .main-nav__wrapper {
+//   // .get-outline();
+//   display: flex;
+//   margin: auto;
+//   width: 100%;
+// }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex-direction: row;
+    flex-grow: 1;
+    min-height: 90px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .main-nav {
+    flex-direction: row;
+    min-height: 90px;
+  }
 }

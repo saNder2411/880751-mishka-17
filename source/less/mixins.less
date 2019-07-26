@@ -1,11 +1,11 @@
 .margin-padding-reset() {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .ul-style-reset() {
-  list-style: none;
   .margin-padding-reset();
+  list-style: none;
 }
 
 .get-outline(@size: 5px, @h: 180) {
@@ -16,6 +16,20 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+  color: @black;
+}
+
+.get-font-title-h2-tablet() {
+  font-weight: bold;
+  font-size: 43px;
+  line-height: 50px;
+  color: @black;
+}
+
+.get-font-title-h2-desctop() {
+  font-weight: bold;
+  font-size: 53px;
+  line-height: 57px;
   color: @black;
 }
 
@@ -34,6 +48,7 @@
   line-height: 1em;
   text-align: left;
   color: @grayish-text;
+
   &::placeholder {
     font-family: inherit;
     font-size: 19px;

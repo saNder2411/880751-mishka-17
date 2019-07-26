@@ -1,3 +1,18 @@
 .toggle {
+  display: none;
+}
+
+.toggle ~ label {
   .get-font-button();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 48px;
+
+  border: 2px solid @grayish-text;
+}
+
+.toggle:checked ~ label {
+  border-color: @green1;
 }
