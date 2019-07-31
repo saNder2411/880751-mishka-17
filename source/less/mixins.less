@@ -57,3 +57,21 @@
     color: @gray-placeholder;
   }
 }
+
+.page-container() {
+  max-width: @mobile-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desctop-width) {
+    max-width: @desctop-width;
+  }
+}

@@ -1,37 +1,28 @@
 .order {
-  .get-outline(5px, 130);
   background-color: @white;
 }
 
 .order__wrapper {
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
+  .page-container();
+  .get-outline();
   padding: 30px;
+  padding-bottom: 10px;
 }
 
 .order__intro {
-  width: 242px;
+  .margin-padding-reset();
 
   font-size: 13px;
 }
 
 @media (min-width: @tablet-width) {
   .order__wrapper {
-    .get-outline();
-    // width: 772px;
-    width: 86.528497409%;
-    padding: 50px;
-  }
 
-  .order__intro {
-    width: 612px;
   }
 }
 
 @media (min-width: @desctop-width) {
   .order__wrapper {
-    // width: 1150px;
-    width: 91.304347826%;
+
   }
 }

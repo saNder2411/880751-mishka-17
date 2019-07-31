@@ -1,0 +1,75 @@
+.card {
+  .page-container();
+  .get-outline();
+  padding-top: 30px;
+}
+
+.card__image {
+  display: block;
+
+  img {
+    display: block;
+    width: 260px;
+    height: 195px;
+  }
+}
+
+.card__description {
+  padding: 0 28px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+
+  border: 1px solid @border-color;
+  border-top: none;
+}
+
+.card__top {
+  padding-bottom: 27px;
+
+  border-bottom: 1px solid @border-color;
+}
+
+.card__title {
+  .margin-padding-reset();
+  padding-bottom: 10px;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: @black;
+}
+
+.card__parameters {
+  .margin-padding-reset();
+
+  font-size: 13px;
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.card__price {
+  .margin-padding-reset();
+
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: bold;
+  color: @black;
+}
+
+.card__basket {
+  // display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(240, 10, 190, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .card__title {
+    font-size: 20px;
+  }
+}
