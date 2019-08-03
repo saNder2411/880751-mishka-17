@@ -4,7 +4,6 @@
 
 .contacts__wrapper {
   .page-container();
-  .get-outline();
   padding-top: 45px;
   padding-bottom: 40px;
 }
@@ -12,11 +11,11 @@
 .contacts__title {
   .get-font-title-h2();
   .margin-padding-reset();
-  margin-bottom: 42px;
+  padding-bottom: 25px;
 }
 
 .contacts__table {
-  margin-bottom: 42px;
+  padding-bottom: 42px;
 
   line-height: 30px;
 }
@@ -35,84 +34,88 @@
   display: block;
   max-width: 320px;
   height: 457px;
-  z-index: 2;
-  .get-outline();
-
   margin: 0 -30px;
   margin-bottom: 40px;
 }
 
-.contacts__button {
-
-}
-
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    // width: 772px;
-    width: 86.528497409%;
+    padding-top: 62px;
+    padding-bottom: 57px;
   }
 
   .contacts__title {
     .get-font-title-h2-tablet();
+    padding-bottom: 42px;
   }
 
   .contacts__table {
-    width: 81%;
+    padding-bottom: 61px;
+
+    font-size: 17px;
+
+    tbody {
+      display: flex;
+    }
+
+    tr {
+      width: 50%;
+    }
   }
 
-  .contacts__table tbody {
-    display: flex;
-  }
-
-  .contacts__table tr {
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .contacts__value {
-    display: block;
-    width: 220px;
-
-    background-color: rgba(255, 0, 0, 0.3);
+  .contacts__map {
+    max-width: 768px;
+    width: 768px;
+    height: 457px;
+    margin: 0 -50px;
+    margin-bottom: 55px;
   }
 
   .contacts__button {
-    margin-bottom: 57px;
+    width: 230px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desctop-width) {
   .contacts__wrapper {
-    // width: 1150px;
-    width: 91.304347826%;
+    position: relative;
+
+    padding-top: 72px;
+    padding-bottom: 105px;
+    padding-left: 225px;
+    padding-right: 600px;
   }
 
   .contacts__title {
     .get-font-title-h2-desctop();
-    margin-top: 152px;
-    margin-left: 225px;
+    padding-bottom: 45px;
   }
 
   .contacts__table {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin-left: 225px;
-  }
+    padding-bottom: 75px;
 
-  .contacts__table tbody {
-    flex-direction: column;
+    tbody {
+      display: block;
+    }
+
+    tr {
+      width: 100%;
+    }
   }
 
   .contacts__map {
-    order: 4;
-    margin-top: -510px;
-    margin-left: auto;
-    margin-right: 50px;
-    margin-bottom: 105px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 525px;
+    height: 457px;
+    margin: 0;
   }
 
   .contacts__button {
-    margin-left: 225px;
+    width: 230px;
+    margin: 0;
   }
 }

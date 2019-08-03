@@ -2,6 +2,8 @@
   .page-container();
   padding-top: 30px;
   padding-bottom: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   background-color: @white;
   box-shadow: -5px 10px 20px 0 rgba(0, 0, 0, 0.1), 5px 10px 20px 0 rgba(0, 0, 0, 0.1);
@@ -41,30 +43,19 @@
 
 @media (min-width: @tablet-width) {
   .modal {
-
+    max-width: 567px;
+    padding: 0 108px;
+    padding-top: 51px;
+    padding-bottom: 46px;
   }
 
   .modal__title {
-
-
     font-size: 30px;
     line-height: 57px;
+    letter-spacing: -0.006em;
   }
 
-  .modal__text {;
+  .modal__text {
     font-size: 17px;
-  }
-
-  .modal__list {
-  }
-
-  .modal__submit {
-
-  }
-}
-
-@media (min-width: @desctop-width) {
-  .modal {
-
   }
 }

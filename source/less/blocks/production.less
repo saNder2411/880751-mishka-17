@@ -1,6 +1,5 @@
 .production {
   .page-container();
-  .get-outline();
   padding-top: 30px;
 
   background-color: @white;
@@ -16,7 +15,7 @@
 
 .production__title {
   .margin-padding-reset();
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   padding-left: 57px;
 
   font-size: 17px;
@@ -26,7 +25,6 @@
 }
 
 .production__video {
-  .get-outline();
   position: relative;
 
   margin: 0 -34px;
@@ -35,6 +33,8 @@
 
 .production__image {
   display: block;
+  width: 260px;
+  height: 150px;
 }
 
 .production__play {
@@ -48,77 +48,81 @@
 
 .production__description {
   .margin-padding-reset();
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 
   font-size: 13px;
 }
 
 @media (min-width: @tablet-width) {
   .production {
-    // width: 772px;
-    width: 86.528497409%;
-    padding: 50px;
+    padding-top: 54px;
+  }
+
+  .production__wrapper-position {
+    position: relative;
+    padding-top: 455px;
+  }
+
+  .production__wrapper {
+    padding: 0 42px;
+    padding-top: 40px;
+    padding-bottom: 46px;
+
+    border: 1px solid @border-color;
   }
 
   .production__title {
-    width: 130px;
-    margin-bottom: 25px;
-    margin-left: 107px;
+    padding-bottom: 35px;
+    padding-left: 65px;
 
     font-size: 20px;
   }
 
   .production__video {
-    .get-outline(5px, 360);
-    order: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+  }
+
+  .production__image {
     width: 668px;
     height: 455px;
   }
 
   .production__description {
-    width: 585px;
-    margin-left: 40px;
-  }
+    padding-bottom: 40px;
 
-  .production__wrapper .production__button {
-    // width: 580px;
-    width: 86.8%;
-    margin: 0 auto;
+    font-size: 15px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desctop-width) {
   .production {
-    // width: 1150px;
-    width: 91.304347826%;
+    padding-top: 57px;
+  }
+
+  .production__wrapper-position {
+    position: relative;
+    padding-top: 0;
+    padding-left: 682px;
   }
 
   .production__wrapper {
-    // width: 1050px;
-    width: 100%;
-    height: 455px;
+    padding-left: 80px;
+    padding-right: 57px;
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .production__title {
-    width: 130px;
-    margin-top: 100px;
-    margin-bottom: 42px;
-    margin-left: 78px;
+    padding-left: 0;
   }
 
-  .production__video {
+  .production__image {
     width: 682px;
     height: 455px;
-  }
-
-  .production__description {
-    width: 222px;
-    margin-bottom: 50px;
-    margin-left: 78px;
-  }
-
-  .production__wrapper .production__button {
-    width: 230px;
-    margin-left: 78px;
   }
 }

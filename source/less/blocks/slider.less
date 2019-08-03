@@ -1,13 +1,20 @@
-.slider {
-  // .get-outline(5px, 310);
-}
-
 .slider__nav {
   margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .slider__nav {
+    position: absolute;
+    right: 50px;
+    bottom: 140px;
 
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .slider__nav {
+    right: 50px;
+    bottom: 190px;
   }
 }

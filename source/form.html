@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- Pixel Glass -->
@@ -43,37 +43,31 @@
           <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
         </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="main-nav__list menu-list">
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
+        <ul class="main-nav__user-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list menu-list">
-          <!-- <li class="menu-list__item">
-            <form class="search-form" action="#" method="get">
-              <label class="search-form__label-icon" for="search-feild" aria-label="Поиск по сайту"></label>
-              <input class="search-form__field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-            </form>
-          </li> -->
-          <li class="menu-list__item">
-            <a class="menu-list__link menu-list__link--search" href="search-form.html">Поиск по сайту</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link menu-list__link--basket" href="basket.html">Корзина: пока пуста</a>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list menu-list">
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="catalog.html">Новые поступления</a>
+        <ul class="main-nav__search-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--search" href="search-form.html">Поиск по сайту</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="form.html">Распродажа</a>
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--basket" href="basket.html">Корзина: пока пуста</a>
           </li>
         </ul>
-        <p class="main-nav__item">
+        <ul class="main-nav__extra extra-list">
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="catalog.html">Новые поступления</a>
+          </li>
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="form.html">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__delivery">
           Бесплатная доставка по России
         </p>
       </nav>
@@ -101,20 +95,20 @@
               <h5 class="form__title">ТИП</h5>
               <ul class="form__list">
                 <li class="form__item">
-                  <input class="form__radio" type="radio" name="interior" id="radio-interior" value="Аксессуар для интерьера" checked>
+                  <input class="form__radio" type="radio" name="choice" id="radio-interior" value="Аксессуар для интерьера" checked>
                   <label for="radio-interior" >Аксессуар для интерьера</label>
                 </li>
                 <li class="form__item">
-                  <input class="form__radio" type="radio" name="toys" id="radio-toys" value="Детская игрушка" >
+                  <input class="form__radio" type="radio" name="choice" id="radio-toys" value="Детская игрушка" >
                   <label for="radio-toys" >Детская игрушка</label>
                 </li>
               </ul>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--gray-color">
             <div class="form__wrapper-content">
               <h5 class="form__title">ЦВЕТ</h5>
-              <ul class="form__list">
+              <ul class="form__list form__list--flex">
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="white" id="white-checkbox" value="Белый" checked>
                   <label for="white-checkbox">Белый</label>
@@ -146,22 +140,22 @@
             <div class="form__wrapper-content">
               <h5 class="form__title">ФИО</h5>
               <ul class="form__list">
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-name">Имя:</label>
                   <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-surname">Фамилия:</label>
                   <input class="form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-secondname">Отчество:</label>
                   <input class="form__input" type="text" name="user-surname" id="user-secondname" placeholder="Отчество, если желаете">
                 </li>
               </ul>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--gray-color">
             <div class="form__wrapper-content">
               <h5 class="form__title">ТЕЛ</h5>
               <ul class="form__list">
@@ -173,7 +167,7 @@
               </ul>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--gray-color">
             <div class="form__wrapper-content">
               <h5 class="form__title">E-mail</h5>
               <ul class="form__list">

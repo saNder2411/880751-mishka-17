@@ -4,9 +4,12 @@
 
 .top-product__wrapper {
   .page-container();
-  .get-outline();
   padding-top: 35px;
   padding-bottom: 35px;
+}
+
+.top-product__wrapper-header {
+  padding-bottom: 25px;
 }
 
 .top-product__title {
@@ -21,17 +24,23 @@
   font-size: 17px;
   line-height: 20px;
   color: @green1;
+  text-transform: uppercase;
 }
 
 .top-product__description {
   .margin-padding-reset();
-  margin-top: 25px;
+  padding-bottom: 30px;
 }
 
 .top-product__parameters {
-  margin-top: 30px;
+  width: 100%;
+  padding-bottom: 25px;
 
   line-height: 20px;
+
+  td {
+    padding: 14px 0;
+  }
 }
 
 .top-product__option {
@@ -45,7 +54,6 @@
 }
 
 .top-product__image {
-  margin-top: 25px;
   width: 260px;
   height: 315px;
 }
@@ -63,68 +71,97 @@
 
 @media (min-width: @tablet-width) {
   .top-product__wrapper {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 
+  .top-product__wrapper-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 45px;
   }
 
   .top-product__title {
     .get-font-title-h2-tablet();
-
   }
 
   .top-product__sub-title {
+    width: 75px;
+    padding-right: 30px;
 
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .top-product__wrapper-content {
+    position: relative;
+
+    padding-right: 380px;
   }
 
   .top-product__description {
+    padding-bottom: 45px;
 
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .top-product__parameters {
-
+    padding-bottom: 55px;
   }
 
   .top-product__image {
+    position: absolute;
+    top: 0;
+    right: 0;
 
+    width: 333px;
+    height: 404px;
   }
 
   .top-product__price {
+    padding-top: 0;
+    padding-bottom: 35px;
 
-  }
-
-  .top-product__button {
-
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: @desctop-width) {
   .top-product__wrapper {
+    padding-top: 110px;
+    padding-bottom: 73px;
+    padding-left: 225px;
+  }
 
+  .top-product__wrapper-header {
+    position: relative;
+    display: block;
+    padding-bottom: 50px;
   }
 
   .top-product__title {
     .get-font-title-h2-desctop();
-
   }
 
   .top-product__sub-title {
-
+    position: absolute;
+    top: 5px;
+    left: -135px;
+    padding-right: 0;
   }
 
-  .top-product__description {
-
+  .top-product__wrapper-content {
+    padding-right: 583px;
   }
 
   .top-product__parameters {
-
-}
-  .top-product__price {
-
-
-    font-size: 20px;
-    line-height: 24px;
+    padding-bottom: 105px;
   }
 
-  .top-product__button {
-
+  .top-product__image {
+    top: -160px;
   }
 }

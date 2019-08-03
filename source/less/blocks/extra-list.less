@@ -1,0 +1,21 @@
+.extra-list {
+  .ul-style-reset();
+  display: none;
+}
+
+@media (min-width: @desctop-width) {
+  .extra-list {
+    display: flex;
+    margin-right: auto;
+  }
+
+  .extra-list__link {
+    display: block;
+    padding: 18px 0;
+    padding-right: 60px;
+
+    font-weight: bold;
+    font-size: 15px;
+    color: @black;
+  }
+}

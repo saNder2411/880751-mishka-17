@@ -43,37 +43,31 @@
           <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
         </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        <ul class="main-nav__user-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list">
-          <!-- <li class="menu-list__item">
-            <form class="search-form" action="#" method="get">
-              <label class="search-form__label-icon" for="search-feild" aria-label="Поиск по сайту"></label>
-              <input class="search-form__field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-            </form>
-          </li> -->
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--search" href="search-form.html">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--basket" href="basket.html">Корзина: пока пуста</a>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Новые поступления</a>
+        <ul class="main-nav__search-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--search" href="search-form.html">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Распродажа</a>
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--basket" href="basket.html">Корзина: пока пуста</a>
           </li>
         </ul>
-        <p class="main-nav__footnote">
+        <ul class="main-nav__extra extra-list">
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="catalog.html">Новые поступления</a>
+          </li>
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="form.html">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__delivery">
           Бесплатная доставка по России
         </p>
       </nav>
@@ -151,32 +145,36 @@
       <section class="about-us">
         <div class="about-us__wrapper">
           <h2 class="about-us__title">Коротко о нас:</h2>
-          <ul class="about-us__list">
-            <li class="about-us__item">
-              <img class="about-us__image about-us__image--eko" src="img/icon-feature-flower.svg" alt="иконка цветок" width="32" height="37">
-              <p class="about-us__text">Экологически чистые материалы</p>
-            </li>
-            <li class="about-us__item">
-              <img class="about-us__image about-us__image--north-style" src="img/icon-feature-money.svg" alt="иконка купюра" width="47" height="27">
-              <p class="about-us__text">Скандинавский стиль по российской цене</p>
-            </li>
-            <li class="about-us__item">
-              <img class="about-us__image about-us__image--like-pluse" src="img/icon-feature-heart.svg" alt="иконка сердечко" width="34" height="27">
-              <p class="about-us__text">Увеличивает лайки на фотографиях</p>
-            </li>
-            <li class="about-us__item">
-              <img class="about-us__image about-us__image--with-love" src="img/icon-feature-ball.svg" alt="иконка клубок ниток" width="35" height="34">
-              <p class="about-us__text">Связано вручную с любовью и умилением</p>
-            </li>
-            <li class="about-us__item">
-              <img class="about-us__image about-us__imagem--national-produce" src="img/icon-feature-rocket.svg" alt="иконка ракета" width="55" height="23">
-              <p class="about-us__text">Поддержка отечественного производителя</p>
-            </li>
-            <li class="about-us__item">
-              <img class="about-us__image about-us__image--gift-wrapping" src="img/icon-feature-gift.svg" alt="иконка подарок" width="33" height="32">
-              <p class="about-us__text">Поставляется в подарочной упаковке</p>
-            </li>
-          </ul>
+          <div class="about-us__wrapper-list">
+            <ul class="about-us__list">
+              <li class="about-us__item">
+                <img class="about-us__image about-us__image--eko" src="img/icon-feature-flower.svg" alt="иконка цветок" width="32" height="37">
+                <p class="about-us__text">Экологически чистые материалы</p>
+              </li>
+              <li class="about-us__item">
+                <img class="about-us__image about-us__image--north-style" src="img/icon-feature-money.svg" alt="иконка купюра" width="47" height="27">
+                <p class="about-us__text">Скандинавский стиль по российской цене</p>
+              </li>
+              <li class="about-us__item">
+                <img class="about-us__image about-us__image--like-pluse" src="img/icon-feature-heart.svg" alt="иконка сердечко" width="34" height="27">
+                <p class="about-us__text">Увеличивает лайки на фотографиях</p>
+              </li>
+            </ul>
+            <ul class="about-us__list">
+              <li class="about-us__item">
+                <img class="about-us__image about-us__image--with-love" src="img/icon-feature-ball.svg" alt="иконка клубок ниток" width="35" height="34">
+                <p class="about-us__text">Связано вручную с любовью и умилением</p>
+              </li>
+              <li class="about-us__item">
+                <img class="about-us__image about-us__imagem--national-produce" src="img/icon-feature-rocket.svg" alt="иконка ракета" width="55" height="23">
+                <p class="about-us__text">Поддержка отечественного производителя</p>
+              </li>
+              <li class="about-us__item">
+                <img class="about-us__image about-us__image--gift-wrapping" src="img/icon-feature-gift.svg" alt="иконка подарок" width="33" height="32">
+                <p class="about-us__text">Поставляется в подарочной упаковке</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
