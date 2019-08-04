@@ -1,4 +1,29 @@
 .page-footer {
-  .get-outline(5px, 290);
-  background-color: #ffffff;
+  background-color: @lightgray;
+}
+
+.page-footer__wrapper {
+  .page-container();
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 28%;
+  }
+
+  .page-footer__logo-image {
+    width: 102px;
+    height: 35px;
+  }
 }

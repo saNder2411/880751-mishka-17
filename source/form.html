@@ -4,40 +4,72 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Pixel Glass -->
+      <style>
+        HTML {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          /* По умолчанию показывается мобильный макет */
+          background-image: url( "img/mishka-form-mobile.png" );
+        }
+        /* Планшет */
+        @media ( min-width: 768px ) {
+          HTML {
+            /* Планшетный макет */
+            background-image: url( "img/mishka-form-tablet.png" );
+          }
+        }
+        /* Десктоп */
+        @media ( min-width: 1150px ) {
+          HTML {
+            /* Десктопный макет */
+            background-image: url( "img/mishka-form-desktop.png" );
+          }
+        }
+      </style>
+      <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+      <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="header-page">
-      <a class="header-page__logo" href="index.html">
-        <img class="header-page__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»">
-      </a>
       <nav class="main-nav">
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
+        </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="order.html">Вязание на заказ</a>
-            </li>
-            <li class="menu-list__item">
-              <form class="menu-list__item search-form" action="#" method="get">
-                <label class="search-form__label-icon" for="search-feild" aria-label="Поиск по сайту"></label>
-                <input class="search-form__field" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-              </form>
-            </li>
-            <!-- <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--search" href="search-form.html">Поиск по сайту</a>
-            </li> -->
-            <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--basket" href="basket.html">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__user-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__search-nav user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--search" href="search-form.html">Поиск по сайту</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--basket" href="basket.html">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-nav__extra extra-list">
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="catalog.html">Новые поступления</a>
+          </li>
+          <li class="extra-list__item">
+            <a class="extra-list__link" href="form.html">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__delivery">
+          Бесплатная доставка по России
+        </p>
       </nav>
     </header>
 
@@ -56,23 +88,27 @@
             Заполните простую форму заказа и мы свяжемся с вами,
             чтобы уточнить детали.
           </p>
-          <form class="order__form form" action="#" method="post">
-            <fieldset class="form__fieldset">
-              <legend class="form__title">ТИП</legend>
+        </div>
+        <form class="order__form form" action="#" method="post">
+          <fieldset class="form__fieldset">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">ТИП</h5>
               <ul class="form__list">
                 <li class="form__item">
-                  <input class="form__radio" type="radio" name="interior" id="radio-interior" value="Аксессуар для интерьера" checked>
+                  <input class="form__radio" type="radio" name="choice" id="radio-interior" value="Аксессуар для интерьера" checked>
                   <label for="radio-interior" >Аксессуар для интерьера</label>
                 </li>
                 <li class="form__item">
-                  <input class="form__radio" type="radio" name="toys" id="radio-toys" value="Детская игрушка" >
+                  <input class="form__radio" type="radio" name="choice" id="radio-toys" value="Детская игрушка" >
                   <label for="radio-toys" >Детская игрушка</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__title">ЦВЕТ</legend>
-              <ul class="form__list">
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--gray-color">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">ЦВЕТ</h5>
+              <ul class="form__list form__list--flex">
                 <li class="form__item">
                   <input class="form__checkbox" type="checkbox" name="white" id="white-checkbox" value="Белый" checked>
                   <label for="white-checkbox">Белый</label>
@@ -98,26 +134,30 @@
                   <label for="orange-checkbox">Оранжевый</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__title">ФИО</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">ФИО</h5>
               <ul class="form__list">
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-name">Имя:</label>
                   <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-surname">Фамилия:</label>
                   <input class="form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--flex">
                   <label class="form__label" for="user-secondname">Отчество:</label>
                   <input class="form__input" type="text" name="user-surname" id="user-secondname" placeholder="Отчество, если желаете">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__title">ТЕЛ</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--gray-color">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">ТЕЛ</h5>
               <ul class="form__list">
                 <li class="form__item">
                   <div class="form__field form__field--phone">
@@ -125,9 +165,11 @@
                   </div>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__title">E-mail</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--gray-color">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">E-mail</h5>
               <ul class="form__list">
                 <li class="form__item">
                   <div class="form__field form__field--email">
@@ -135,37 +177,40 @@
                   </div>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="form__title">ДОП</legend>
-              <textarea class="form__textarea" name="textarea" rows="9">
-                Опишите все ваши пожелания к заказу
-              </textarea>
-            </fieldset>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <div class="form__wrapper-content">
+              <h5 class="form__title">ДОП</h5>
+              <textarea class="form__textarea" name="textarea" rows="9" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+          </fieldset>
+          <div class="form__wrapper-footer">
             <p class="form__note">
               *Поля обязательны для заполнения
             </p>
             <button class="form__submit button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__social social">
-          <ul class="page-footer__social social">
-            <li class="social__item">
-              <a class="social__link" href="https://www.instagram.com" aria-label="Мы в иснтаграме"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com" aria-label="Мы на фейс буке"></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.twitter.com" aria-label="Мы в твитере"></a>
-            </li>
-          </ul>
-        </div>
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
+        </a>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.instagram.com" aria-label="Мы в иснтаграме"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.facebook.com" aria-label="Мы на фейс буке"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.twitter.com" aria-label="Мы в твитере"></a>
+          </li>
+        </ul>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>

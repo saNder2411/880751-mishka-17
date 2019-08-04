@@ -1,5 +1,11 @@
 .header-page {
-  padding: 22px 0;
-  background-color: #ffffff;
-  .get-outline(5px,50);
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .header-page {
+    margin-bottom: -60px;
+
+    box-shadow: inset 0 -61px 0 0 @border-color;
+  }
 }

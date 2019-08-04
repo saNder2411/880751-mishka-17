@@ -1,0 +1,16 @@
+.toggle {
+  display: none;
+}
+
+.toggle ~ label {
+  .get-font-button();
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  text-align: center;
+  border: 2px solid @grayish-text;
+}
+
+.toggle:checked ~ label {
+  border-color: @green1;
+}

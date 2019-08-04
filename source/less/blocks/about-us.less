@@ -1,20 +1,82 @@
 .about-us {
-  .get-outline();
+  background-color: @white;
+}
 
-  background-color: #ffffff;
+.about-us__wrapper {
+  .page-container();
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 
 .about-us__title {
   .get-font-title-h2();
+  .margin-padding-reset();
+  padding-bottom: 30px;
 }
 
 .about-us__list {
   .ul-style-reset();
 }
 
-.about-us__item {
+.about-us__image {
+  padding-bottom: 20px;
+}
+
+.about-us__text {
+  .margin-padding-reset();
+  padding-bottom: 20px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  color: #000000;
+  color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__wrapper {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  .about-us__title {
+    .get-font-title-h2-tablet();
+    padding-bottom: 47px;
+  }
+
+  .about-us__wrapper-list {
+    display: flex;
+  }
+
+  .about-us__list {
+    width: 50%;
+  }
+
+  .about-us__item {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .about-us__wrapper {
+    padding-top: 60px;
+    padding-bottom: 75px;
+    padding-left: 225px;
+  }
+
+  .about-us__title {
+    .get-font-title-h2-desctop();
+    padding-bottom: 47px;
+  }
+
+  .about-us__wrapper-list {
+    display: flex;
+  }
+
+  .about-us__list {
+    width: 43%;
+  }
+
+  .about-us__item {
+    padding-right: 100px;
+  }
 }

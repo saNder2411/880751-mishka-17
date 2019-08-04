@@ -1,5 +1,28 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0;
+}
+
 .copyright__text {
+  margin-right: 30px;
   font-size: 19px;
-  line-height: 18px;
-  color: #000000;
+  line-height: 1em;
+  color: @black;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+
+  background-color: rgba(150, 90, 200, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 28%;
+    justify-content: flex-end;
+    padding: 53px 0;
+  }
 }

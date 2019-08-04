@@ -1,8 +1,33 @@
 .order {
-  .get-outline(5px, 130);
-  background-color: #ffffff;
+  background-color: @white;
+}
+
+.order__wrapper {
+  .page-container();
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .order__intro {
+  .margin-padding-reset();
   font-size: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .order__wrapper {
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
+
+  .order__intro {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .order__wrapper {
+    padding-top: 112px;
+    padding-bottom: 11px;
+  }
 }

@@ -1,3 +1,28 @@
 .search-form {
-  .get-outline();
+  .margin-padding-reset();
+  margin: auto;
+}
+
+.search-form__field {
+  .margin-padding-reset();
+  margin: auto;
+}
+
+.search-form__field::placeholder {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 17px;
+  color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .search-form__field {
+    display: none;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .search-form__field {
+    display: none;
+  }
 }

@@ -1,15 +1,36 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("fonts/opensans.woff2"),
+    url("https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff2") format("woff2"),
+    local("fonts/opensans.woff"),
+    url("https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bbck.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: local("fonts/opensansbold.woff2"),
+    url("https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2") format("woff2"),
+    local("fonts/opensansbold.woff"),
+    url("https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff") format("woff");
+}
+
 body {
-  min-width: 320px;
   .margin-padding-reset();
+  min-width: 320px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #444444;
+  color: @grayish-text;
 
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 img {
@@ -19,4 +40,20 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
