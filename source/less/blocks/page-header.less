@@ -1,6 +1,6 @@
 .page-header {
-  padding-top: 70px;
-  padding-bottom: 74px;
+  padding-top: 69px;
+  padding-bottom: 77px;
 
   background-color: @lightgray;
 }
@@ -8,7 +8,7 @@
 .page-header--toys {
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: 50% -18px;
 }
 
 .page-header__wrapper {
@@ -25,18 +25,38 @@
 }
 
 .page-header__list {
-  margin-top: 120px;
-  margin-bottom: -74px;
+  margin-top: 123px;
+  margin-bottom: -77px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    padding-top: 96px;
+    position: relative;
+    padding-top: 95px;
     padding-bottom: 78px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -13px;
+      left: 50%;
+      margin-left: -384px;
+      z-index: 1;
+
+      width: 768px;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
   }
 
   .page-header--toys {
-    padding-top: 144px;
+    padding-top: 152px;
+
+    background-position: 50% 0;
+    background-size: cover;
   }
 
   .page-header__title {
@@ -44,22 +64,36 @@
   }
 
   .page-header__list {
-    margin-top: 370px;
+    margin-top: 374px;
     margin-bottom: -78px;
   }
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .page-header {
-    padding-bottom: 100px;
+    padding-top: 94px;
+    padding-bottom: 101px;
+
+    &::after {
+      bottom: -19px;
+
+      margin-left: -575px;
+      width: 1150px;
+      height: 34px;
+      background-size: contain;
+    }
+  }
+
+  .page-header--toys {
+    padding-top: 154px;
   }
 
   .page-header__title {
-    .get-font-title-h2-desctop();
+    .get-font-title-h2-desktop();
   }
 
   .page-header__list {
-    margin-top: 354px;
-    margin-bottom: -100px;
+    margin-top: 358px;
+    margin-bottom: -101px;
   }
 }

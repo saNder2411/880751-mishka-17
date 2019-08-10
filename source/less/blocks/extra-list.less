@@ -1,9 +1,10 @@
 .extra-list {
   .ul-style-reset();
   display: none;
+  z-index: 1;
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .extra-list {
     display: flex;
     margin-right: auto;
@@ -11,8 +12,10 @@
 
   .extra-list__link {
     display: block;
-    padding: 18px 0;
+    padding-top: 18px;
+    padding-bottom: 19px;
     padding-right: 60px;
+    padding-left: 0;
 
     font-weight: bold;
     font-size: 15px;

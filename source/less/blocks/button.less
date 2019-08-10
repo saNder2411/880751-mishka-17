@@ -12,21 +12,27 @@
   background-color: @white;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: @grayish-text;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--green {
   color: @white;
-
   border: none;
   background-color: @green1;
-}
 
-@media (min-width: @tablet-width) {
-  .button {
-    // width: 290px;
+  &:hover {
+    background-color: #59d5bc;
   }
 
-  .button--green {
-    // width: 350px;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
