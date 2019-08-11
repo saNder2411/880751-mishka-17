@@ -4,27 +4,56 @@
 
 .about-us__wrapper {
   .page-container();
-  padding-top: 35px;
+  padding-top: 28px;
   padding-bottom: 10px;
 }
 
 .about-us__title {
   .get-font-title-h2();
   .margin-padding-reset();
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 
 .about-us__list {
   .ul-style-reset();
 }
 
-.about-us__image {
-  padding-bottom: 20px;
+.about-us__image--eko {
+  padding-left: 8px;
+  margin-bottom: 10px;
+}
+
+.about-us__image--north-style {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.about-us__image--like-pluse {
+  padding-left: 8px;
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+
+.about-us__image--with-love {
+  padding-left: 4px;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.about-us__imagem--national-produce {
+  margin-top: 33px;
+  margin-left: -5px;
+  margin-bottom: 20px;
+}
+
+.about-us__image--gift-wrapping {
+  padding-left: 4px;
+  margin-top: 31px;
+  margin-bottom: 13px;
 }
 
 .about-us__text {
   .margin-padding-reset();
-  padding-bottom: 20px;
 
   font-weight: bold;
   font-size: 17px;
@@ -34,13 +63,16 @@
 
 @media (min-width: @tablet-width) {
   .about-us__wrapper {
-    padding-top: 60px;
+    padding-top: 47px;
     padding-bottom: 65px;
   }
 
   .about-us__title {
     .get-font-title-h2-tablet();
     padding-bottom: 47px;
+    margin-left: -5px;
+
+    letter-spacing: -0.5px;
   }
 
   .about-us__wrapper-list {
@@ -51,12 +83,37 @@
     width: 50%;
   }
 
-  .about-us__item {
-    padding-right: 40px;
+  .about-us__image--eko {
+    margin-top: 3px;
+  }
+
+  .about-us__image--north-style {
+    margin-top: 58px;
+  }
+
+  .about-us__image--like-pluse {
+    margin-top: 62px;
+  }
+
+  .about-us__image--with-love {
+    margin-top: 5px;
+  }
+
+  .about-us__imagem--national-produce {
+    margin-top: 62px;
+  }
+
+  .about-us__image--gift-wrapping {
+    margin-top: 60px;
+  }
+
+  .about-us__text {
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
-@media (min-width: @desctop-width) {
+@media (min-width: @desktop-width) {
   .about-us__wrapper {
     padding-top: 60px;
     padding-bottom: 75px;
@@ -64,19 +121,46 @@
   }
 
   .about-us__title {
-    .get-font-title-h2-desctop();
+    .get-font-title-h2-desktop();
     padding-bottom: 47px;
-  }
-
-  .about-us__wrapper-list {
-    display: flex;
+    margin-left: -4px;
+    letter-spacing: -0.8px;
   }
 
   .about-us__list {
-    width: 43%;
+    width: 40%;
   }
 
-  .about-us__item {
-    padding-right: 100px;
+  .about-us__image--eko {
+    margin-top: 1px;
+    padding-left: 9px;
+  }
+
+  .about-us__image--north-style {
+    margin-top: 58px;
+    margin-bottom: 19px;
+    padding-left: 1px;
+  }
+
+  .about-us__image--like-pluse {
+    margin-top: 63px;
+    margin-bottom: 13px;
+  }
+
+  .about-us__image--with-love {
+    margin-top: 4px;
+    padding-left: 3px;
+    margin-bottom: 9px;
+  }
+
+  .about-us__imagem--national-produce {
+    margin-top: 62px;
+    margin-left: -6px;
+    margin-bottom: 19px;
+  }
+
+  .about-us__image--gift-wrapping {
+    margin-top: 60px;
+    padding-left: 3px;
   }
 }

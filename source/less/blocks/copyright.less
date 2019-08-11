@@ -2,7 +2,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 23px 0;
+  padding-top: 17px;
+  padding-bottom: 27px;
+
+  &:hover {
+    .copyright__text {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .copyright__text {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    path {
+      fill: #46c1ae;
+    }
+  }
 }
 
 .copyright__text {
@@ -12,11 +35,10 @@
   color: @black;
 }
 
-.copyright__link {
+.copyright__icon {
+  padding-top: 4px;
   width: 27px;
   height: 34px;
-
-  background-color: rgba(150, 90, 200, 0.3);
 }
 
 @media (min-width: @tablet-width) {
