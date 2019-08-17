@@ -1,24 +1,19 @@
 .dividing-line {
   .margin-padding-reset();
   .page-container();
+  padding: 0;
   height: 6px;
   border: none;
+
   background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
   background-size: contain;
-}
 
-@media (min-width: @tablet-width) {
-  .dividing-line {
+  @media (min-width: @tablet-width) {
     height: 15px;
-    background-size: cover;
-
-    transform: rotate(180deg);
   }
-}
 
-@media (min-width: @desktop-width) {
-  .dividing-line {
+  @media (min-width: @desktop-width) {
     height: 23px;
-    max-width: 1050px;
   }
 }

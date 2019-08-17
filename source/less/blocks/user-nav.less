@@ -1,18 +1,41 @@
 .user-nav {
   .ul-style-reset();
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 52.1%;
+    display: flex;
+
+    &:first-of-type {
+      order: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+    justify-content: flex-end;
+
+    &:first-of-type {
+      order: -1;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .user-nav__item {
   text-align: left;
 
   border-bottom: 1px solid @border-color;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .user-nav__link {
   display: block;
-  padding-top: 25px;
-  padding-bottom: 29px;
+  padding-top: 26px;
+  padding-bottom: 28px;
   padding-left: 75px;
 
   font-weight: bold;
@@ -20,11 +43,29 @@
   color: @black;
 
   &:hover {
-    color: rgba(0, 0, 0, 0.6);
+    color: @black-60;
   }
 
   &:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: @black-30;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 18px;
+    padding-bottom: 19px;
+    padding-right: 36px;
+    padding-left: 0;
+
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 31px;
+    padding-bottom: 33px;
+    padding-right: 36px;
+    padding-left: 0;
+
+    font-size: 17px;
   }
 }
 
@@ -41,7 +82,7 @@
     width: 11.5px;
     height: 11.5px;
 
-    border: 2px solid @icon-static;
+    border: 2px solid @black-20;
     border-radius: 50%;
   }
 
@@ -55,7 +96,7 @@
     width: 6px;
     height: 2.5px;
 
-    background-color: @icon-static;
+    background-color: @black-20;
     border-radius: 0 40% 40% 0;
 
     transform: rotate(45deg);
@@ -73,6 +114,29 @@
   &:active::after {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 41px;
+
+    font-size: 0;
+
+    border-right: 1px solid @black-10;
+    border-left: 1px solid @black-10;
+
+    &::before {
+      top: 42%;
+      left: 40.5%;
+    }
+
+    &::after {
+      top: 51px;
+      left: 45px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 32px 41px;
+  }
 }
 
 .user-nav__link--basket {
@@ -89,6 +153,21 @@
       opacity: 0.3;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 31px;
+    padding-bottom: 33px;
+    padding-left: 82px;
+    padding-right: 0;
+
+    font-size: 17px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 83px;
+    padding-right: 3px;
+  }
 }
 
 .user-nav__link-icon {
@@ -97,109 +176,19 @@
   left: 9.4%;
 
   path {
-    fill: @icon-static;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .user-nav {
-    width: 52.1%;
-    display: flex;
-
-    &:first-of-type {
-      order: 1;
-    }
+    fill: @black-20;
   }
 
-  .user-nav__item {
-    border: none;
-  }
-
-  .user-nav__link {
-    padding-top: 18px;
-    padding-bottom: 19px;
-    padding-right: 37px;
-    padding-left: 0;
-
-    font-size: 15px;
-  }
-
-  .user-nav__link--search {
-    padding: 32px 41px;
-
-    font-size: 0;
-
-    border-right: 1px solid @lightblack;
-    border-left: 1px solid @lightblack;
-
-    &::before {
-      top: 42%;
-      left: 40.5%;
-    }
-
-    &::after {
-      top: 51px;
-      left: 45px;
-    }
-  }
-
-  .user-nav__link--basket {
-    padding-top: 31px;
-    padding-bottom: 33px;
-    padding-left: 81px;
-    padding-right: 0;
-
-    font-size: 17px;
-    text-align: right;
-  }
-
-  .user-nav__link-icon {
+  @media (min-width: @tablet-width) {
     top: 40%;
-    left: 11.5%;
-
-    path {
-      fill: @icon-static;
-    }
+    left: 31px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .user-nav {
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
+.user-nav__link[href^="form"] {
+  @media (min-width: @desktop-width) {
+    padding-left: 34px;
 
-    &:first-of-type {
-      order: -1;
-      justify-content: flex-start;
-    }
-  }
-
-  .user-nav__link[href^="form"] {
-    padding-left: 35px;
-
-    border-left: 1px solid @lightblack;
-  }
-
-  .user-nav__link {
-    padding-top: 31px;
-    padding-bottom: 33px;
-    padding-right: 35px;
-    padding-left: 0;
-
-    font-size: 17px;
-  }
-
-  .user-nav__link--search {
-    padding: 32px 41px;
-
-    font-size: 0;
-  }
-
-  .user-nav__link--basket {
-    padding-left: 83px;
-    padding-right: 0;
-
-    text-align: right;
+    border-left: 1px solid @black-10;
   }
 }
