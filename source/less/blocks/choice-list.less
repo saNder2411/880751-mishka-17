@@ -1,14 +1,25 @@
 .choice-list {
   .ul-style-reset();
   margin: 0 -30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin: 0;
+  }
+}
+
+.choice-list__item {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
 
 .choice-list__link {
   position: relative;
 
   display: block;
-  padding-top: 24px;
-  padding-bottom: 31px;
+  padding-top: 25px;
+  padding-bottom: 30px;
   padding-left: 28px;
   padding-right: 50%;
 
@@ -21,17 +32,46 @@
   p {
     .margin-padding-reset();
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 31px;
+    padding-left: 35px;
+
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 60%;
+
+    &:hover {
+      margin-top: -5px;
+      padding-bottom: 35px;
+
+      path {
+        fill: @blue-green-70;
+      }
+    }
+
+    &:active {
+      color: @white-30;
+
+      path {
+        fill: @blue-green-30;
+      }
+    }
+  }
 }
 
 .choice-list__link--interior {
   background-color: @green1;
 
   &:hover {
-    background-color: #59d5bc;
+    background-color: @seafoam-blue-two;
   }
 
   &:active {
-    background-color: #59d5bc;
+    background-color: @seafoam-blue-two;
   }
 }
 
@@ -39,11 +79,11 @@
   background-color: @green2;
 
   &:hover {
-    background-color: #46c1ae;
+    background-color: @aqua-marine-two;
   }
 
   &:active {
-    background-color: #46c1ae;
+    background-color: @aqua-marine-two;
   }
 }
 
@@ -54,65 +94,21 @@
   right: 37px;
 
   path {
-    fill: rgba(20, 144, 128, 0.5);
+    fill: @blue-green-50;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 30px;
+    right: 37px;
   }
 }
 
 .choice-list__link-icon--toys {
   top: 21px;
   right: 27px;
-}
 
-@media (min-width: @tablet-width) {
-  .choice-list {
-    display: flex;
-    margin: 0;
-  }
-
-  .choice-list__item {
-    width: 50%;
-  }
-
-  .choice-list__link {
-    padding-top: 27px;
-    padding-bottom: 31px;
-    padding-left: 35px;
-
-    line-height: 30px;
-  }
-
-  .choice-list__link-icon {
-    top: 30px;
-    right: 37px;
-  }
-
-  .choice-list__link-icon--toys {
+  @media (min-width: @tablet-width) {
     top: 31px;
     right: 34px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .choice-list__link {
-    padding-right: 60%;
-  }
-
-  .choice-list__link:hover {
-    // transform: scaleY(1.07);
-    // transform-origin: bottom;
-    margin-top: -5px;
-    padding-bottom: 35px;
-
-    path {
-      fill: rgba(20, 144, 128, 0.7);
-    }
-  }
-
-  .choice-list__link:active {
-    color: rgba(255, 255, 255, 0.3);
-
-    path {
-      fill: rgba(20, 144, 128, 0.3);
-    }
   }
 }

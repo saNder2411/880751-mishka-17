@@ -1,55 +1,116 @@
-.about-us {
-  background-color: @white;
-}
-
 .about-us__wrapper {
   .page-container();
   padding-top: 28px;
-  padding-bottom: 10px;
+  padding-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 47px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 34px;
+    padding-left: 225px;
+  }
 }
 
 .about-us__title {
   .get-font-title-h2();
   .margin-padding-reset();
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    .get-font-title-h2-tablet();
+    margin-bottom: 50px;
+    margin-left: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .get-font-title-h2-desktop();
+    margin-bottom: 48px;
+  }
+}
+
+.about-us__wrapper-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .about-us__list {
   .ul-style-reset();
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
 }
 
-.about-us__image--eko {
-  padding-left: 8px;
-  margin-bottom: 10px;
-}
+.about-us__item {
+  margin-bottom: 30px;
 
-.about-us__image--north-style {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
+  .about-us__image--eko {
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
 
-.about-us__image--like-pluse {
-  padding-left: 8px;
-  margin-top: 34px;
-  margin-bottom: 14px;
-}
+  .about-us__image--money {
+    margin-bottom: 20px;
+  }
 
-.about-us__image--with-love {
-  padding-left: 4px;
-  margin-top: 32px;
-  margin-bottom: 10px;
-}
+  .about-us__image--heart {
+    margin-top: 4px;
+    margin-left: 7px;
+    margin-bottom: 13px;
+  }
 
-.about-us__imagem--national-produce {
-  margin-top: 33px;
-  margin-left: -5px;
-  margin-bottom: 20px;
-}
+  .about-us__image--roll {
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+  }
 
-.about-us__image--gift-wrapping {
-  padding-left: 4px;
-  margin-top: 31px;
-  margin-bottom: 13px;
+  .about-us__image--rocket {
+    margin-top: 3px;
+    margin-left: -6px;
+    margin-bottom: 21px;
+  }
+
+  .about-us__image--box {
+    margin-left: 3px;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+
+    .about-us__image--eko {
+      margin-left: 9px;
+    }
+
+    .about-us__image--heart {
+      margin-top: 6px;
+      margin-left: 8px;
+    }
+
+    .about-us__image--roll {
+      margin-bottom: 9px;
+    }
+
+    .about-us__image--rocket {
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+
+    .about-us__image--box {
+      margin-top: 3px;
+      margin-bottom: 13px;
+    }
+  }
 }
 
 .about-us__text {
@@ -59,108 +120,9 @@
   font-size: 17px;
   line-height: 20px;
   color: @black;
-}
 
-@media (min-width: @tablet-width) {
-  .about-us__wrapper {
-    padding-top: 47px;
-    padding-bottom: 65px;
-  }
-
-  .about-us__title {
-    .get-font-title-h2-tablet();
-    padding-bottom: 47px;
-    margin-left: -5px;
-
-    letter-spacing: -0.5px;
-  }
-
-  .about-us__wrapper-list {
-    display: flex;
-  }
-
-  .about-us__list {
-    width: 50%;
-  }
-
-  .about-us__image--eko {
-    margin-top: 3px;
-  }
-
-  .about-us__image--north-style {
-    margin-top: 58px;
-  }
-
-  .about-us__image--like-pluse {
-    margin-top: 62px;
-  }
-
-  .about-us__image--with-love {
-    margin-top: 5px;
-  }
-
-  .about-us__imagem--national-produce {
-    margin-top: 62px;
-  }
-
-  .about-us__image--gift-wrapping {
-    margin-top: 60px;
-  }
-
-  .about-us__text {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .about-us__wrapper {
-    padding-top: 60px;
-    padding-bottom: 75px;
-    padding-left: 225px;
-  }
-
-  .about-us__title {
-    .get-font-title-h2-desktop();
-    padding-bottom: 47px;
-    margin-left: -4px;
-    letter-spacing: -0.8px;
-  }
-
-  .about-us__list {
-    width: 40%;
-  }
-
-  .about-us__image--eko {
-    margin-top: 1px;
-    padding-left: 9px;
-  }
-
-  .about-us__image--north-style {
-    margin-top: 58px;
-    margin-bottom: 19px;
-    padding-left: 1px;
-  }
-
-  .about-us__image--like-pluse {
-    margin-top: 63px;
-    margin-bottom: 13px;
-  }
-
-  .about-us__image--with-love {
-    margin-top: 4px;
-    padding-left: 3px;
-    margin-bottom: 9px;
-  }
-
-  .about-us__imagem--national-produce {
-    margin-top: 62px;
-    margin-left: -6px;
-    margin-bottom: 19px;
-  }
-
-  .about-us__image--gift-wrapping {
-    margin-top: 60px;
-    padding-left: 3px;
   }
 }

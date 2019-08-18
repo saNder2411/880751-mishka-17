@@ -2,15 +2,15 @@
   .ul-style-reset();
   display: none;
   z-index: 1;
-}
 
-@media (min-width: @desktop-width) {
-  .extra-list {
+  @media (min-width: @desktop-width) {
     display: flex;
     margin-right: auto;
   }
+}
 
-  .extra-list__link {
+.extra-list__link {
+  @media (min-width: @desktop-width) {
     display: block;
     padding-top: 18px;
     padding-bottom: 19px;

@@ -2,16 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 17px;
-  padding-bottom: 27px;
+  margin-top: 17px;
 
   &:hover {
     .copyright__text {
-      color: rgba(0, 0, 0, 0.6);
+      color: @black-60;
     }
 
     path {
-      fill: #46c1ae;
+      fill: @aqua-marine-two;
     }
   }
 
@@ -19,12 +18,17 @@
     opacity: 0.3;
 
     .copyright__text {
-      color: rgba(0, 0, 0, 0.6);
+      color: @black-60;
     }
 
     path {
-      fill: #46c1ae;
+      fill: @aqua-marine-two;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    margin-top: 0;
   }
 }
 
@@ -36,15 +40,11 @@
 }
 
 .copyright__icon {
-  padding-top: 4px;
+  margin-top: 4px;
   width: 27px;
   height: 34px;
-}
 
-@media (min-width: @tablet-width) {
-  .copyright {
-    width: 28%;
-    justify-content: flex-end;
-    padding: 53px 0;
+  path {
+    fill: @green1;
   }
 }
