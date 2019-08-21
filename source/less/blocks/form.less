@@ -248,11 +248,10 @@
     width: 87%;
 
     .form__item {
-      width: 33%;
-      flex-grow: 1;
+      width: calc(32% + 9px);
 
       &:nth-child(even) {
-        width: 33%;
+        width: calc(32% + 9px);
       }
     }
   }
@@ -395,6 +394,8 @@
     margin-top: 0;
     padding-left: 17px;
     padding-bottom: 9px;
+    width: auto;
+    flex-grow: 1;
 
     &::placeholder {
       font-size: 19px;
