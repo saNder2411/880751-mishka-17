@@ -59,19 +59,19 @@
 }
 
 .page-container() {
-  max-width: @mobile-width;
+  max-width: @desktop-width;
   box-sizing: border-box;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
 
   @media (min-width: @tablet-width) {
-    max-width: @tablet-width;
+    // max-width: @tablet-width;
     padding-left: 50px;
     padding-right: 50px;
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
-  }
+  // @media (min-width: @desktop-width) {
+  //   max-width: @desktop-width;
+  // }
 }

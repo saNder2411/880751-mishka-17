@@ -1,20 +1,28 @@
 .toggle {
-  display: none;
-}
+  & ~ label {
+    .get-font-button();
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border: 2px solid @gray-10;
+  }
 
-.toggle ~ label {
-  .get-font-button();
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  border: 2px solid @gray-10;
+  &:focus {
+    & ~ label {
+      border-color: @gray-30;
+    }
+  }
 
   &:hover {
-    border-color: @gray-30;
+    & ~ label {
+      border-color: @gray-30;
+    }
   }
-}
 
-.toggle:checked ~ label {
-  border-color: @green1;
+  &:checked {
+    & ~ label {
+      border-color: @green1;
+    }
+  }
 }

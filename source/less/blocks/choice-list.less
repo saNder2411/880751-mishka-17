@@ -11,6 +11,7 @@
 .choice-list__item {
   @media (min-width: @tablet-width) {
     width: 50%;
+    display: flex;
   }
 }
 
@@ -31,6 +32,7 @@
 
   p {
     .margin-padding-reset();
+    padding-right: 50%;
   }
 
   @media (min-width: @tablet-width) {
@@ -44,11 +46,12 @@
   @media (min-width: @desktop-width) {
     padding-right: 60%;
 
+
     &:hover {
       margin-top: -5px;
-      padding-bottom: 35px;
+      padding-bottom: 36px;
 
-      path {
+      .choice-list__link-icon {
         fill: @blue-green-70;
       }
     }
@@ -56,7 +59,7 @@
     &:active {
       color: @white-30;
 
-      path {
+      .choice-list__link-icon {
         fill: @blue-green-30;
       }
     }
@@ -93,9 +96,7 @@
   top: 23px;
   right: 37px;
 
-  path {
-    fill: @blue-green-50;
-  }
+  fill: @blue-green-50;
 
   @media (min-width: @tablet-width) {
     top: 30px;

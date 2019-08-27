@@ -91,9 +91,11 @@
 
 .top-product__description {
   .margin-padding-reset();
+  // min-height: 72px;
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
+    // min-height: 90px;
     margin-bottom: 37px;
 
     font-size: 17px;
@@ -140,14 +142,15 @@
 }
 
 .top-product__image {
-  // width: 260px;
-  // height: 315px;
+  display: block;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 9px;
     right: 1px;
 
+    margin: 0;
     // width: 333px;
     // height: 404px;
   }
@@ -163,7 +166,7 @@
 
 .top-product__price {
   .margin-padding-reset();
-  margin-top: 17px;
+  margin-top: 23px;
   margin-bottom: 27px;
 
   text-align: center;

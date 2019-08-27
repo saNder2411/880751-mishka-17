@@ -5,14 +5,14 @@
 .page-footer__wrapper {
   .page-container();
   padding-top: 25px;
-  padding-bottom: 27px;
+  padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 51px;
-    padding-bottom: 57px;
+    padding-top: 52px;
+    padding-bottom: 52px;
   }
 }
 
@@ -21,7 +21,7 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    width: 27%;
+    min-width: 178px;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,21 +31,16 @@
 
 .page-footer__logo-image {
   @media (min-width: @tablet-width) {
-    width: 102px;
-    height: 35px;
+    cursor: pointer;
 
     &:hover {
-      path {
-        fill: @aqua-marine-two;
-      }
+      fill: @aqua-marine-two;
     }
 
     &:active {
       opacity: 0.3;
 
-      path {
-        fill: @aqua-marine-two;
-      }
+      fill: @aqua-marine-two;
     }
   }
 }
