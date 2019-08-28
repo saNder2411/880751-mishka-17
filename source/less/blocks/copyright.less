@@ -1,15 +1,14 @@
 .copyright {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 17px;
+  padding-top: 22px;
 
   &:hover {
     .copyright__text {
       color: @black-60;
     }
 
-    path {
+    .copyright__icon {
       fill: @aqua-marine-two;
     }
   }
@@ -21,30 +20,26 @@
       color: @black-60;
     }
 
-    path {
+    .copyright__icon {
       fill: @aqua-marine-two;
     }
   }
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
-    margin-top: 0;
+    padding-top: 5px;
   }
 }
 
 .copyright__text {
-  margin-right: 30px;
+  margin-right: 28px;
   font-size: 19px;
-  line-height: 1em;
+  line-height: 28px;
   color: @black;
 }
 
 .copyright__icon {
-  margin-top: 4px;
-  width: 27px;
-  height: 34px;
+  // margin-top: 5px;
 
-  path {
-    fill: @green1;
-  }
+  fill: @green1;
 }
