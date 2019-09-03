@@ -2,21 +2,32 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="Заказ">
+    <meta name="description" content="Вязание на заказ">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
-    <script src = "js/svgxuse.min.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="main-nav__logo" href="index.html" aria-label="Переход на главную страницу сайта">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»"/>
+            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="«Мишка»">
           </picture>
         </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть главное меню"></button>
@@ -30,12 +41,12 @@
         </ul>
         <ul class="main-nav__search-nav user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link user-nav__link--search" href="search-form.html" aria-label="Переход на окно поиска">Поиск по сайту</a>
+            <a class="user-nav__link user-nav__link--search" href="search-form.html" aria-label="Переход на страницу поиска">Поиск по сайту</a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link user-nav__link--basket" href="basket.html" aria-label="Переход на странцу добавленных товаров в карзину">
+            <a class="user-nav__link user-nav__link--basket" href="basket.html" aria-label="Переход на страницу добавленных товаров в карзину">
               <svg class="user-nav__icon" width="21" height="18" aria-hidden="true" role="presentation">
-                <use xlink:href="img/sprite.svg#icon-basket"></use>
+                <use xlink:href="#icon-sprite-cart"></use>
               </svg>
               Корзина: пока пуста
             </a>
@@ -43,10 +54,10 @@
         </ul>
         <ul class="main-nav__extra extra-list">
           <li class="extra-list__item">
-            <a class="extra-list__link" href="catalog.html" aria-label="Переход на странцу новых поступлений">Новые поступления</a>
+            <a class="extra-list__link" href="catalog.html" aria-label="Переход на страницу новых поступлений">Новые поступления</a>
           </li>
           <li class="extra-list__item">
-            <a class="extra-list__link" href="form.html" aria-label="Переход на странцу распродажи">Распродажа</a>
+            <a class="extra-list__link" href="form.html" aria-label="Переход на страницу распродажи">Распродажа</a>
           </li>
         </ul>
         <p class="main-nav__delivery">
@@ -54,7 +65,7 @@
         </p>
       </nav>
     </header>
-    <main class="page-form" >
+    <main class="page-form">
       <section class="promo">
         <div class="promo__wrapper">
           <h1 class="promo__title">Вязание на заказ</h1>
@@ -76,11 +87,11 @@
               <ul class="form__list form__list--radio">
                 <li class="form__item">
                   <input class="form__radio visually-hidden" type="radio" name="choice" id="radio-interior" value="Аксессуар для интерьера" checked>
-                  <label for="radio-interior" >Аксессуар для интерьера</label>
+                  <label for="radio-interior">Аксессуар для интерьера</label>
                 </li>
                 <li class="form__item">
-                  <input class="form__radio form__radio--bottom visually-hidden" type="radio" name="choice" id="radio-toys" value="Детская игрушка" >
-                  <label for="radio-toys" >Детская игрушка</label>
+                  <input class="form__radio form__radio--bottom visually-hidden" type="radio" name="choice" id="radio-toys" value="Детская игрушка">
+                  <label for="radio-toys">Детская игрушка</label>
                 </li>
               </ul>
             </div>
@@ -122,11 +133,11 @@
               <ul class="form__list form__list--input">
                 <li class="form__item">
                   <label class="form__label" for="user-name">Имя:</label>
-                  <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
+                  <input class="form__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required="">
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="user-surname">Фамилия:</label>
-                  <input class="form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
+                  <input class="form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required="">
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="user-secondname">Отчество:</label>
@@ -140,18 +151,18 @@
               <div class="form__row">
                 <h5 class="form__title">ТЕЛ</h5>
                 <div class="form__field form__field--phone">
-                  <input class="form__input" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                  <input class="form__input" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
                   <svg class="form__icon form__icon--phone" width="25" height="24" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#icon-phone"
+                    <use xlink:href="#icon-sprite-phone"></use>
                   </svg>
                 </div>
               </div>
               <div class="form__row">
                 <h5 class="form__title">E-mail</h5>
                 <div class="form__field form__field--email">
-                  <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required>
+                  <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required="">
                   <svg class="form__icon form__icon--mail" width="32" height="32" aria-hidden="true" role="presentation">
-                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                    <use xlink:href="#icon-sprite-mail"></use>
                   </svg>
                 </div>
               </div>
@@ -178,28 +189,28 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html" aria-label="Переход на главную страницу сайта">
           <svg class="page-footer__logo-image" width="102" height="34" role="img">
-            <use xlink:href="img/sprite.svg#footer-logo"></use>
+            <use xlink:href="#icon-sprite-logo-footer"></use>
           </svg>
         </a>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link" href="https://www.instagram.com" aria-label="Переход на странцу магазина в иснтаграме">
+            <a class="social__link" href="https://www.instagram.com" aria-label="Переход на страницу магазина в иснтаграме">
               <svg width="22" height="21" role="img">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="#icon-sprite-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com" aria-label="Переход на странцу магазина в фейсбуке">
+            <a class="social__link" href="https://www.facebook.com" aria-label="Переход на страницу магазина в фейсбуке">
               <svg width="15" height="28" role="img">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="#icon-sprite-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.twitter.com" aria-label="Переход на странцу магазина в твитере">
+            <a class="social__link" href="https://www.twitter.com" aria-label="Переход на страницу магазина в твитере">
               <svg width="23" height="20" role="img">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-sprite-twitter"></use>
               </svg>
             </a>
           </li>
@@ -207,11 +218,11 @@
         <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт разработчика HTML Academy">
           <b class="copyright__text">Разработано</b>
           <svg class="copyright__icon" width="27" height="34" role="img">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#icon-sprite-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
-    <script src="js/main-nav.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

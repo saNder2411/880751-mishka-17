@@ -36,6 +36,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 100%;
+    box-sizing: border-box;
     padding-top: 27px;
     padding-bottom: 31px;
     padding-left: 35px;
@@ -44,23 +46,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 60%;
-
-
     &:hover {
       margin-top: -5px;
       padding-bottom: 36px;
 
-      .choice-list__link-icon {
-        fill: @blue-green-70;
+      .choice-list__icon {
+        color: @blue-green-70;
       }
     }
 
     &:active {
       color: @white-30;
 
-      .choice-list__link-icon {
-        fill: @blue-green-30;
+      .choice-list__icon {
+        color: @blue-green-30;
       }
     }
   }
@@ -90,13 +89,13 @@
   }
 }
 
-.choice-list__link-icon {
+.choice-list__icon {
   position: absolute;
 
   top: 23px;
   right: 37px;
 
-  fill: @blue-green-50;
+  color: @blue-green-50;
 
   @media (min-width: @tablet-width) {
     top: 30px;
@@ -104,7 +103,7 @@
   }
 }
 
-.choice-list__link-icon--toys {
+.choice-list__icon--toys {
   top: 21px;
   right: 27px;
 
