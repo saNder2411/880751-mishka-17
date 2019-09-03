@@ -1,6 +1,6 @@
 .contacts__wrapper {
   .page-container();
-  padding-top: 35px;
+  padding-top: 34px;
   padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
@@ -11,7 +11,7 @@
   @media (min-width: @desktop-width) {
     position: relative;
 
-    padding-top: 138px;
+    padding-top: 143px;
     padding-bottom: 105px;
     padding-left: 225px;
     padding-right: 600px;
@@ -120,6 +120,8 @@
   padding-right: 28px;
   padding-bottom: 28px;
 
+  white-space: nowrap;
+
   @media (min-width: @tablet-width) {
     padding-right: 21px;
   }
@@ -128,8 +130,13 @@
 .contacts__link {
   padding-bottom: 4px;
   border-bottom: 1px solid #46c1ae;
+  color: @grayish-text;
 
   cursor: pointer;
+
+  &:visited {
+    color: @grayish-text;
+  }
 
   &:hover {
     color: @aqua-marine-two;

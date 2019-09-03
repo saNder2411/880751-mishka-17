@@ -52,6 +52,7 @@
   line-height: 1em;
   color: @green1;
   text-transform: uppercase;
+  white-space: nowrap;
 
   &::after {
     content: "";
@@ -191,6 +192,11 @@
     display: block;
   }
 
+  &:focus ~ label::before {
+    outline: 2px solid @indigo-50;
+    outline-offset: 2px;
+  }
+
   @media (min-width: @tablet-width) {
     & ~ label {
       min-height: 53px;
@@ -305,6 +311,11 @@
     display: block;
   }
 
+  &:focus ~ label::before {
+    outline: 2px solid @indigo-50;
+    outline-offset: 2px;
+  }
+
   @media (min-width: @tablet-width) {
     & ~ label {
       min-height: 52px;
@@ -357,11 +368,14 @@
   .get-font-input();
   width: 100%;
   box-sizing: border-box;
-  min-height: 39px;
-  margin-top: 9px;
-  padding-bottom: 10px;
+  min-height: 48px;
+  padding-top: 5px;
+  padding-bottom: 9px;
   border: none;
   border-bottom: 2px solid @black;
+
+  vertical-align: bottom;
+  line-height: 17px;
 
   &::placeholder {
     font-size: 17px;
@@ -372,7 +386,7 @@
     border-color: @seafoam-blue-three;
 
     & ~ .form__icon {
-      fill: @seafoam-blue-three;
+      color: @seafoam-blue-three;
     }
   }
 
@@ -380,15 +394,14 @@
     border-color: @seafoam-blue-three;
 
     & ~ .form__icon {
-      fill: @seafoam-blue-three;
+      color: @seafoam-blue-three;
     }
   }
 
   @media (min-width: @tablet-width) {
     min-height: 38px;
-    margin-top: 0;
     padding-left: 17px;
-    padding-bottom: 9px;
+    padding-top: 0;
 
     &::placeholder {
       font-size: 19px;
@@ -414,8 +427,10 @@
   position: relative;
 
   .form__input {
-    margin-top: 20px;
+    margin-top: 11px;
     padding-bottom: 11px;
+
+    font-size: 19px;
   }
 
   @media (min-width: @tablet-width) {
@@ -453,7 +468,7 @@
   top: 0;
   right: 0;
 
-  fill: @black-20;
+  color: @black-20;
 }
 
 .form__icon--phone {
@@ -522,7 +537,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-top: 49px;
+    margin-top: 50px;
     padding-bottom: 0;
   }
 

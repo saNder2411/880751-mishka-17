@@ -8,10 +8,6 @@
   list-style: none;
 }
 
-.get-outline(@size: 5px, @h: 180) {
-  outline: @size solid hsla(@h, 50%, 50%, 0.5);
-}
-
 .get-font-title-h2() {
   font-weight: bold;
   font-size: 25px;
@@ -66,12 +62,7 @@
   padding-right: 30px;
 
   @media (min-width: @tablet-width) {
-    // max-width: @tablet-width;
     padding-left: 50px;
     padding-right: 50px;
   }
-
-  // @media (min-width: @desktop-width) {
-  //   max-width: @desktop-width;
-  // }
 }
