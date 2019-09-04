@@ -76,7 +76,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src(["source/js/vendor/*.js", "source/js/*.js"])
+  return gulp.src("source/js/*.js")
     .pipe(concat("app.js"))
     .pipe(gulp.dest("build/js"));
 });
@@ -112,7 +112,8 @@ gulp.task("copy", function () {
       "source/fonts/**",
       "!source/fonts/README",
       "source/img/**",
-      "source/favicon/**"
+      "source/favicon/**",
+      "source/js/vendor/**"
     ], {
       base: "source"
     })
