@@ -25,7 +25,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.2.0",
-    "stylelint": "9.10.1",
+    "stylelint": "14.16.0",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
